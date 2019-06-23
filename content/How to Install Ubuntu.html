@@ -147,11 +147,66 @@ init_mathjax();
           </div>
           
         </header>
-    <div id="tipue_search_content"> <a href='目錄結構.html'>Next</a> >> 目錄結構<br /><h1>簡介</h1>
-<p>CMSimfly (<a href="https://github.com/chiamingyen/cmsimfly">https://github.com/chiamingyen/cmsimfly)</a> 是一套簡單的網際內容管理系統, 採用 Flask 網際框架, 以 Beautifulsoup 解讀分頁內容.</p>
-<p><img alt="" height="471" src="./../images/gocycle4.png" width="587"/></p>
-<p></p>
-<br /> <a href='目錄結構.html'>Next</a> >> 目錄結構</div>
+    <div id="tipue_search_content">如何安裝作業系統 << <a href='如何安裝作業系統.html'>Previous</a> <a href='How to Install windows10.html'>Next</a> >> How to Install windows10<br /><h1>How to Install Ubuntu</h1>
+<p>先去官網下載Ubuntu的安裝映像檔<a href="https://www.ubuntu.com">https://www.ubuntu.com</a></p>
+<p>這邊以Ubuntu Server 18.04 LTS作為示範</p>
+<p>點開Download的下拉選單後下載Ubuntu Server</p>
+<p>Desktop是有GUI介面的  Server是純命令列介面</p>
+<p><img alt="" height="400" src="./../images/chrome_Lv8BWHe3mT.png" width="610"/></p>
+<p>下載完成後打開Oracle VM VirtualBox點擊新增</p>
+<p><img caption="false" height="500" src="./../images/VirtualBox_BsaQKPr9ab.png" width="691"/></p>
+<p>名稱自行命名    機器資料夾如果沒有要放其他地方就預設就好</p>
+<p>類型選Linux    版本選Ubuntu (64-bit) </p>
+<p><span>記憶體大小越大越好以不影響主電腦運行為優先</span></p>
+<p>如果沒有64位元可能是電腦沒有開啟VT或是CPU不支援VT</p>
+<p>硬碟就選立即建立虛擬硬碟  之後按建立</p>
+<p><img caption="false" height="500" src="./../images/VirtualBox_ibW96eYn7C.png" width="565"/></p>
+<p>檔案位置沒有特殊需求一樣預設就好</p>
+<p>檔案大小我們習慣設定500GB  然後選擇動態配置這樣用多少檔案就多大</p>
+<p>固定的話你分配多少硬碟就會預先分配多少這樣很佔空間</p>
+<p><img caption="false" height="500" src="./../images/VirtualBox_cy5VWuwcei.png" width="549"/></p>
+<p>硬碟檔類型選擇VMDK方便以後可以將虛擬轉至實體使用  按下建立後</p>
+<p>會在左方多出一個虛擬機  這時可以先進行設定  也可以先安裝完後再設定</p>
+<p>這邊先不設定直接點擊啟動</p>
+<p><img caption="false" height="500" src="./../images/VirtualBox_vJEwLTi4G9.png" width="691"/></p>
+<p>然後它會跳出一個視窗讓你選擇安裝系統的映像檔  選完之後按啟動</p>
+<p><img caption="false" height="500" src="./../images/VirtualBoxVM_7COp8GqcpO.png" width="580"/></p>
+<p>這邊選擇系統語言  選擇English</p>
+<p><img caption="false" height="500" src="./../images/VirtualBox_dc2OohT6eQ.png" width="595"/></p>
+<p>下一步  這邊是鍵盤的語言設置一樣都是English</p>
+<p><img caption="false" height="500" src="./../images/VirtualBox_32HFBsZ7O0.png" width="595"/></p>
+<p>下一步  這邊選第一個安裝  其他兩個是多主機雲端協同用的</p>
+<p><img caption="false" height="500" src="./../images/VirtualBox_b01VMpm1k8.png" width="595"/></p>
+<p>下一步  這邊是網路設定  目前是以NAT上網  安裝完後再設定  所以直接下一步</p>
+<p><img caption="false" height="500" src="./../images/VirtualBox_XOolHUR1Dy.png" width="595"/></p>
+<p>下一步  這邊是Proxy的設定  這邊是用這個http://140.130.17.4:3128 </p>
+<p>若不使用可直接留白</p>
+<p><img caption="false" height="500" src="./../images/VirtualBox_O7dtc4msVH.png" width="595"/></p>
+<p>下一步  這邊是Ubuntu下載鏡像檔的網址  保持預設就好</p>
+<p>  <img caption="false" height="500" src="./../images/VirtualBox_lrMsqv3NqB.png" width="595"/></p>
+<p>下一步  這邊是分割硬碟然後格式化這邊選第一個整顆硬碟格式化</p>
+<p><img alt="" height="500" src="./../images/VirtualBox_cMhS9jnsot.png" width="595"/></p>
+<p>再來選擇要安裝的硬碟</p>
+<p><img alt="" height="500" src="./../images/VirtualBox_P0TgdOQnP7.png" width="595"/></p>
+<p>這邊確認OK就下一步</p>
+<p><img alt="" height="500" src="./../images/VirtualBox_yHutY5KYuS.png" width="595"/></p>
+<p>它會問你確認要格式化嗎  選Continue</p>
+<p><img alt="" height="500" src="./../images/VirtualBox_ZncsslWH0v.png" width="595"/></p>
+<p>下一步  這邊是設定名字以及登入的帳號密碼</p>
+<p>第一第二項是名字  第三是帳號  第四是密碼  第五是確認密碼</p>
+<p><img caption="false" height="500" src="./../images/VirtualBox_NgWgGlcKKb.png" width="595"/></p>
+<p>下一步  是否要安裝OpenSSH  這邊選擇要</p>
+<p><img alt="" height="500" src="./../images/VirtualBox_THVMOgSq4c.png" width="595"/></p>
+<p>下一步  這邊<span>選擇想要安裝的伺服器組合  如果不要直接下一步就好  就會開始安裝了</span></p>
+<p><img alt="" height="500" src="./../images/VirtualBox_9tFmDQwwKK.png" width="595"/></p>
+<p>有一條槓槓再轉就是正在安裝</p>
+<p><img alt="" height="500" src="./../images/VirtualBox_xDGpCau4Zh.png" width="595"/></p>
+<p>安裝完後選Reboot重開就安裝完成了</p>
+<p>剛開機會需要輸入帳號密碼</p>
+<p>使用sudo都需要輸入密碼</p>
+<p>關機使用 sudo shutdown -h now  關機並關電源</p>
+<p>使用 sudo halt  是關機但不關電源</p>
+<br />如何安裝作業系統 << <a href='如何安裝作業系統.html'>Previous</a> <a href='How to Install windows10.html'>Next</a> >> How to Install windows10</div>
         
     <!-- footer -->
       <div class="container">

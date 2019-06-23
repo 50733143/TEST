@@ -147,11 +147,36 @@ init_mathjax();
           </div>
           
         </header>
-    <div id="tipue_search_content"> <a href='目錄結構.html'>Next</a> >> 目錄結構<br /><h1>簡介</h1>
-<p>CMSimfly (<a href="https://github.com/chiamingyen/cmsimfly">https://github.com/chiamingyen/cmsimfly)</a> 是一套簡單的網際內容管理系統, 採用 Flask 網際框架, 以 Beautifulsoup 解讀分頁內容.</p>
-<p><img alt="" height="471" src="./../images/gocycle4.png" width="587"/></p>
-<p></p>
-<br /> <a href='目錄結構.html'>Next</a> >> 目錄結構</div>
+    <div id="tipue_search_content">近端配置與管理 << <a href='近端配置與管理.html'>Previous</a> <a href='配置可攜程式環境.html'>Next</a> >> 配置可攜程式環境<br /><h1>網路連線設定</h1>
+<p>當不能上網時請先確認IP的取得是自動的</p>
+<p>因為教室的IP分配是DHCP server分配的所以要設為自動</p>
+<p><img alt="" height="400" src="./../images/IP設定.png" width="357"/></p>
+<p>再來確定瀏覽器的Proxy設定正確</p>
+<p>每次上課能用proxy可能都不一樣  視當天狀況更動</p>
+<p>有時可能因為proxy效能不佳   所以反而不設定proxy會更快</p>
+<p>請依實際狀況決定是否要設定</p>
+<p>點擊進階即可進入例外IP設定</p>
+<p><img alt="" height="400" src="./../images/proxy設定.png" width="319"/></p>
+<p>再來要設定例外IP  不設定的話電腦會連到proxy去找這些近端IP</p>
+<p><img alt="" height="400" src="./../images/proxy例外.png" width="319"/></p>
+<p>這樣會導致無法連線到自己的動態網頁進行編輯</p>
+<p>使用Proxy的原因是不使用的話每台電腦連到同樣的網站都是一次流量</p>
+<p>教室這麼多台電腦會造成許多不必要的連線</p>
+<p>設置Proxy後只要有一台電腦連線過後</p>
+<p>Proxy主機就會存有快取資料</p>
+<p>之後再連到同樣的網站</p>
+<p>就不用再連出去只要跟近端Proxy主機要資料就好</p>
+<p>而且近端取得資料較為快速</p>
+<p>也不會造成額外不必要的對外連線</p>
+<p>適合在區網下有大量電腦使用</p>
+<p>非以上情況  可能會因為Proxy主機效能不佳造成連線緩慢</p>
+<p><strong>Proxy常見例外IP</strong></p>
+<ul style="list-style-type: square;">
+<li>192.168.*</li>
+<li>127.0.0.1</li>
+<li>localhost</li>
+</ul>
+<br />近端配置與管理 << <a href='近端配置與管理.html'>Previous</a> <a href='配置可攜程式環境.html'>Next</a> >> 配置可攜程式環境</div>
         
     <!-- footer -->
       <div class="container">

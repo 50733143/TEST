@@ -147,11 +147,61 @@ init_mathjax();
           </div>
           
         </header>
-    <div id="tipue_search_content"> <a href='目錄結構.html'>Next</a> >> 目錄結構<br /><h1>簡介</h1>
-<p>CMSimfly (<a href="https://github.com/chiamingyen/cmsimfly">https://github.com/chiamingyen/cmsimfly)</a> 是一套簡單的網際內容管理系統, 採用 Flask 網際框架, 以 Beautifulsoup 解讀分頁內容.</p>
-<p><img alt="" height="471" src="./../images/gocycle4.png" width="587"/></p>
+    <div id="tipue_search_content">環境準備 << <a href='環境準備.html'>Previous</a> <a href='Git.html'>Next</a> >> Git<br /><h1>Fossil SCM</h1>
+<p><span>Fossil是一個分散式版本控制系統  類似Git</span></p>
+<p><span>請到他們官網下載windows及linux版本(<a href="https://fossil-scm.org">https://fossil-scm.org</a>)</span></p>
+<p>到Download Page下載最新的版本</p>
+<p><img alt="" height="266" src="./../images/Fossil SCM下載.png" width="589"/></p>
+<p>將windows版解壓縮到Y:下  這樣當Ubuntu配置好Fossil後  才有辦法使用</p>
+<p>Ubuntu使用sudo apt install fossil  安裝完後的版本為2.5</p>
+<p>還要安裝<span>sudo apt install stunnel  這是為了在https模式下使用Fossil SCM伺服器</span></p>
+<p>所以我們將Linux版解壓縮   使用FileZilla送到Ubuntu的<span>/home/kmol2019/</span></p>
+<p><span>再使用sudo cp fossil /usr/bin/  用新版的fossil蓋掉舊版的  </span></p>
+<p><span>複製後  再用 fossil version 查驗版本  確認為最新的 2.8 版</span></p>
+<p><span>再來修改 /etc/environment 加入HTTPS=on</span></p>
+<p><span>修改 /etc/default/stunnel4 將 ENABLED=0 改為 1</span></p>
+<p><span>再來創建一個<strong>stunnel.conf</strong></span></p>
+<p><strong></strong>路徑依照實際狀況修改</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">[https]
+accept = server-50733143:5443
+# 只先啟用 ipv4
+#accept = :::443
+cert = /etc/stunnel/localhost.crt
+key = /etc/stunnel/localhost.key
+exec = /usr/bin/fossil
+execargs = /usr/bin/fossil http /home/server-50733143/repository/2019wcmj/ --https --nojail --notfound 2019wcmj</pre>
+<p><span>表示利用 stunnel 執行 fossil 指令 並且透過 http 協定啟動</span></p>
+<p><span>位於/home/server-50733143/repository/2019wcmj/目錄下的倉儲壓縮檔案</span></p>
+<p><span>其中 --nojail 目的在 drop the root privilege but do not enter the chroot jail</span></p>
+<p><span>其後的 --notfound 表示若沒有特別在 URL 中列出所要擷取的 .fossil 檔案</span></p>
+<p><span> (指位於 /home/server-50733143/repository/2019wcmj/ 目錄下)</span></p>
+<p><span>則採用 2019wcmj.fossil</span></p>
+<p><span>假如此時 /etc/stunnel 目錄下尚無 localhost.crt 與 localhost.key 可以利用下列指令建立</span></p>
+<p><span>sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout localhost.key -out localhost.crt</span></p>
+<p><span>配置好後使用sudo /etc/init.d/stunnel4 restart 將stunnel4重啟</span></p>
+<p><strong>使用方法如下</strong></p>
+<p><span>創建一個資料夾並切換目錄到資料夾  mkdir 資料夾名稱  cd資料夾名稱</span></p>
+<p><span>初始化一個倉儲fossil init 名稱.fossil  名稱自行命名</span></p>
+<p><span>接著會跳出一小段密碼請記住它  登入fossil時會用到</span></p>
+<p><span>然後到windows下的可攜系統輸入</span></p>
+<p>fossil clone <a href="https://IP:5443/資">https://IP:5443/資</a>料夾名稱 檔案名稱</p>
+<p>我的範例  fossil clone <a href="https://192.168.1.107:5443">https://192.168.1.107:5443</a>/server-50733143 server-50733143.fossil</p>
+<p>clone回來後使用fossil open 路徑/檔案名稱</p>
+<p>Ubuntu那邊一樣要open</p>
+<p>範例fossil open server-50733143/server-50733143.fossil</p>
+<p>之後就可以在資料夾中加入檔案要提交的時候跟Git差不多</p>
+<p>先fossil addremove  再fossil commit -m "提交訊息"</p>
+<p>最後fossil push <a href="https://使用者名">https://使用者名</a>@IP:5443</p>
+<p>過程會需要輸入密碼就輸入網站登入的密碼即可</p>
+<p>這樣就完成提交了</p>
+<p>提交完成後  Timeline 跟 Files都會出現新的提交</p>
+<p><img caption="false" src="./../images/fossil提交1.png" width="600"/></p>
 <p></p>
-<br /> <a href='目錄結構.html'>Next</a> >> 目錄結構</div>
+<p><img alt="" height="429" src="./../images/fossil提交.png" width="600"/></p>
+<p><span></span>若要讓Ubuntu的資料夾更新輸入</p>
+<p>fossil update即可更新類似Git的git pull</p>
+<p><span></span></p>
+<br />環境準備 << <a href='環境準備.html'>Previous</a> <a href='Git.html'>Next</a> >> Git</div>
         
     <!-- footer -->
       <div class="container">

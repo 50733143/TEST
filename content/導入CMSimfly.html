@@ -136,7 +136,7 @@ init_mathjax();
                             <li><a href="./../blog/index.html">blog</a></li>
                         </ul>
                       </li>
-                     <li><a href='About.html'>About</a><li><a href='Develop.html'>Develop</a></li>
+                     <li class='has-children'><a href='簡介.html'>簡介</a><ul class='dropdown'><li><a href='目錄結構.html'>目錄結構</a><li class='has-children'><a href='頁面編輯.html'>頁面編輯</a><ul class='dropdown'><li><a href='插入程式碼.html'>插入程式碼</a><li><a href='Lua 程式碼.html'>Lua 程式碼</a><li><a href='Javascript 程式碼.html'>Javascript 程式碼</a></li></ul><li><a href='網際簡報.html'>網際簡報</a><li><a href='網誌編輯.html'>網誌編輯</a><li><a href='已知錯誤.html'>已知錯誤</a></li></ul><li class='has-children'><a href='近端配置與管理.html'>近端配置與管理</a><ul class='dropdown'><li><a href='網路連線設定.html'>網路連線設定</a><li><a href='配置可攜程式環境.html'>配置可攜程式環境</a><li><a href='導入CMSimfly.html'>導入CMSimfly</a></li></ul><li class='has-children'><a href='校園授權軟體.html'>校園授權軟體</a><ul class='dropdown'><li><a href='TWAREN SSL-VPN服務.html'>TWAREN SSL-VPN服務</a><li><a href='How to Download.html'>How to Download</a></li></ul><li class='has-children'><a href='如何安裝作業系統.html'>如何安裝作業系統</a><ul class='dropdown'><li><a href='How to Install Ubuntu.html'>How to Install Ubuntu</a><li><a href='How to Install windows10.html'>How to Install windows10</a></li></ul><li><a href='FileZilla.html'>FileZilla</a><li class='has-children'><a href='Ubuntu環境配置.html'>Ubuntu環境配置</a><ul class='dropdown'><li><a href='環境準備.html'>環境準備</a><li><a href='Fossil SCM.html'>Fossil SCM</a></li></ul><li class='has-children'><a href='Git.html'>Git</a><ul class='dropdown'><li><a href='建立GitHub倉儲.html'>建立GitHub倉儲</a><li><a href='啟用GitHub Pages.html'>啟用GitHub Pages</a><li><a href='建立 OpenSSH 格式的 Private 與 Public Keys.html'>建立 OpenSSH 格式的 Private 與 Public Keys</a><li><a href='使用 SSH 執行 Git clone 與 push.html'>使用 SSH 執行 Git clone 與 push</a><li><a href='倉儲改版.html'>倉儲改版</a><li><a href='將 portablegit 中的 helper = manager 的設定移除.html'>將 portablegit 中的 helper = manager 的設定移除</a><li><a href='介紹圖形化git工具.html'>介紹圖形化git工具</a></li></ul><li><a href='儲存設備格式化.html'>儲存設備格式化</a><li><a href='產生亂數1~51.html'>產生亂數1~51</a><li><a href='網管期中自評影片.html'>網管期中自評影片</a><li><a href='網管期末自評影片.html'>網管期末自評影片</a><li><a href='ROC flag.html'>ROC flag</a></li>
                       </ul>
                 </nav>
               </div>
@@ -147,10 +147,16 @@ init_mathjax();
           </div>
           
         </header>
-    <div id="tipue_search_content">About << <a href='About.html'>Previous</a> <br /><h1>Develop</h1>
-<p><a href="https://github.com/mdecourse/cmsimde">https://github.com/mdecourse/cmsimde</a> 的開發, 可以在一個目錄中放入 cmsimde, 然後將 up_dir 中的內容放到與 cmsimde 目錄同位階的地方, 使用 command 進入 cmsimde 目錄, 執行 python wsgi.py, 就可以啟動, 以瀏覽器 https://localhost:9443 就可以連接, 以 admin 作為管理者密碼, 就可以登入維護內容.</p>
-<p>cmsimde 的開發採用 Leo Editor, 開啟 cmsimde 目錄中的 cmsimde.leo 就可以進行程式修改, 結束後, 若要保留網際內容, 只要將 cmsimde 外部的內容倒回 up_dir 目錄中即可後續對 cmsimde 遠端倉儲進行改版.</p>
-<p>init.py 位於  up_dir 目錄, 可以設定 site_title 與 uwsgi 等變數.</p><br />About << <a href='About.html'>Previous</a> </div>
+    <div id="tipue_search_content">配置可攜程式環境 << <a href='配置可攜程式環境.html'>Previous</a> <a href='校園授權軟體.html'>Next</a> >> 校園授權軟體<br /><h1>導入CMSimfly</h1>
+<p>將自己的倉儲clone到近端後  會發現裡面有.git的資料夾以及README.md</p>
+<p>.git資料夾裡的資料存放著關於倉儲的提交紀錄所以盡量不要去動</p>
+<p>而README.md則是github上的顯示內容</p>
+<p><img alt="" height="299" src="./../images/README.md內容.png" width="444"/></p>
+<p>將CMSimfly(<a href="https://github.com/chiamingyen/cmsimfly">https://github.com/chiamingyen/cmsimfly</a>)</p>
+<p>clone下來後將.git及README.md以外的東西全部複製到自己的倉儲下</p>
+<p>cd切換目錄到自己的倉儲後輸入python wsgi.py即可開啟動態網頁</p>
+<p>在瀏覽器輸入<a>https://127.0.0.1:9443</a>就可以進入網頁開始編輯</p>
+<br />配置可攜程式環境 << <a href='配置可攜程式環境.html'>Previous</a> <a href='校園授權軟體.html'>Next</a> >> 校園授權軟體</div>
         
     <!-- footer -->
       <div class="container">

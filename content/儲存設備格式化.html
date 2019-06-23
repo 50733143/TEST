@@ -147,11 +147,30 @@ init_mathjax();
           </div>
           
         </header>
-    <div id="tipue_search_content"> <a href='目錄結構.html'>Next</a> >> 目錄結構<br /><h1>簡介</h1>
-<p>CMSimfly (<a href="https://github.com/chiamingyen/cmsimfly">https://github.com/chiamingyen/cmsimfly)</a> 是一套簡單的網際內容管理系統, 採用 Flask 網際框架, 以 Beautifulsoup 解讀分頁內容.</p>
-<p><img alt="" height="471" src="./../images/gocycle4.png" width="587"/></p>
-<p></p>
-<br /> <a href='目錄結構.html'>Next</a> >> 目錄結構</div>
+    <div id="tipue_search_content">介紹圖形化git工具 << <a href='介紹圖形化git工具.html'>Previous</a> <a href='產生亂數1~51.html'>Next</a> >> 產生亂數1~51<br /><h1>儲存設備格式化</h1>
+<p>大家應該都有發現要將單檔4G以上的檔案放入隨身碟都會出現</p>
+<p><strong>「檔案太大無法放置在目的地檔案系統」</strong></p>
+<p><strong></strong>這是受限於FAT32這個檔案系統  <span>最大單一檔案大小為</span><span lang="EN-US"> 2^32 </span><span>位元組</span><span lang="EN-US">= 4GB </span></p>
+<p>這時我們可以將隨身碟格式化成exFAT</p>
+<p>將你的隨身碟插入電腦  並將資料都先取出  因為格式化會清空資料</p>
+<p>對隨身碟右鍵點擊格式化</p>
+<p><img alt="" height="272" src="./../images/隨身碟格式化1.png" width="346"/></p>
+<p>之後檔案系統選擇exFAT  配置單位就不要動  快速格式化就看自己要不要用</p>
+<p><img caption="false" height="500" src="./../images/隨身碟格式化2.png" width="286"/></p>
+<p>不要動或是選預設配置大小也可以</p>
+<p><img alt="" height="144" src="./../images/隨身碟格式化3.png" width="355"/></p>
+<p>都選好之後就按開始即可  等它格式化完就可以把資料移回去了</p>
+<p><strong>為什麼不使用NTFS呢?</strong></p>
+<p>因為NTFS分區是採用「日誌式」的檔案系統  需要記錄詳細的讀寫操作</p>
+<p>每次的讀寫操作都需要紀錄所以會頻繁的讀寫  比較傷快閃記憶體磁碟晶片</p>
+<p>並不適合隨身碟使用</p>
+<p>但如果是外接硬碟就可以使用NTFS但NTFS為windows的檔案系統</p>
+<p>在Mac系統或其他系統無法使用在相容性上較差</p>
+<p><strong>exFAT</strong></p>
+<p>跨系統相容性佳  如Windows、Mac OS X與Linux</p>
+<p>沒有單檔4G的限制</p>
+<p>讀取大容量檔案時獲得更理想的速度</p>
+<br />介紹圖形化git工具 << <a href='介紹圖形化git工具.html'>Previous</a> <a href='產生亂數1~51.html'>Next</a> >> 產生亂數1~51</div>
         
     <!-- footer -->
       <div class="container">
